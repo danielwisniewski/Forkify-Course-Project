@@ -1,6 +1,5 @@
 import { API_URL, RES_PER_PAGE, KEY } from './config';
 import { AJAX } from './helpers';
-import recipeView from './views/recipeView';
 export const state = {
   recipe: {},
   search: {
@@ -86,10 +85,7 @@ const persistBookmarks = function () {
 };
 
 export const addBookmark = function (recipe) {
-  // Add bookmark
   state.bookmarks.push(recipe);
-
-  // Mark current recipe as bookmark
   if (recipe.id === state.recipe.id) state.recipe.bookmarked = true;
 
   persistBookmarks();

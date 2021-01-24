@@ -1,9 +1,8 @@
-import View from './View.js';
-import icons from 'url:../../img/icons.svg';
+import View from './view.js';
 
 class AddRecipeView extends View {
   _parentElement = document.querySelector('.upload');
-  _message = 'Recipe was succusefully uploaded'
+  _message = 'Recipe was successfully uploaded'
 
   _windowElement = document.querySelector('.add-recipe-window');
   _overlay = document.querySelector('.overlay');
